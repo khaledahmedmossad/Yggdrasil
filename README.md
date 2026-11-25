@@ -170,20 +170,6 @@ pytest
 
 Tests use mocked LDAP responses and do not require a live domain.
 
-## Roadmap
-
-- [x] Read-only Unconstrained Delegation enumeration
-- [x] SPN collection
-- [x] Initial risk findings
-- [x] Terminal and JSON output
-- [x] Unit tests with mocked LDAP
-- [x] HTML report
-- [x] Constrained-delegation and RBCD configuration discovery
-- [x] Domain-controller and Protected Users context
-- [x] Offline BloodHound ACL-edge correlation
-- [x] Candidate delegation-path correlation and Mermaid graph export
-- [x] Authorized-lab GenericWrite → unconstrained delegation → DCSync chain
-- [ ] Native LDAP security-descriptor parsing and effective-rights evaluation
 
 ## License
 
