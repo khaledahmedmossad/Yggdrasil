@@ -1,0 +1,38 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+build/
+dist/
+*.egg-info/
+
+# Secrets and credentials
+.env
+.env.*
+!.env.example
+*.key
+*.pem
+*.pfx
+*.p12
+*.keytab
+*.ccache
+*.kirbi
+
+# Lab data and generated output
+loot/
+reports/
+*.log
+acl-*.json
+full-audit.*
+delegationflow-loot/
+
+# Local configuration
+config.local.yaml
+config.local.yml
+
+# macOS
+.DS_Store

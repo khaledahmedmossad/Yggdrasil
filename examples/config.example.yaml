@@ -1,0 +1,10 @@
+# Example only. Never store passwords in this file.
+server: dc01.example.local
+port: 389
+use_ssl: false
+base_dn: "DC=example,DC=local"
+username: "EXAMPLE\\analyst"
+connect_timeout: 5
+receive_timeout: 15
+page_size: 500
+validate_tls: true

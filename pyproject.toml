@@ -1,0 +1,42 @@
+[build-system]
+requires = ["hatchling>=1.24"]
+build-backend = "hatchling.build"
+
+[project]
+name = "delegationflow"
+version = "0.3.0"
+description = "Active Directory delegation assessment CLI with read-only discovery and an opt-in authorized-lab exploit workflow"
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+authors = [{ name = "DelegationFlow contributors" }]
+dependencies = [
+  "typer>=0.12",
+  "rich>=13",
+  "ldap3>=2.9.1",
+  "pydantic>=2.5",
+  "pyyaml>=6"
+]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Environment :: Console",
+  "Operating System :: MacOS",
+  "Operating System :: POSIX :: Linux",
+  "Programming Language :: Python :: 3.11",
+  "Topic :: Security"
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8", "pytest-cov>=5"]
+impacket = ["impacket>=0.12"]
+exploit = ["impacket>=0.12", "ldap3-ad-auth>=0.1.1", "dnspython>=2.4"]
+
+[project.scripts]
+delegationflow = "delegationflow.cli:app"
+
+[tool.hatch.build.targets.wheel]
+packages = ["delegationflow"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
