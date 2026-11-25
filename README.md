@@ -168,9 +168,6 @@ pip install -e ".[dev]"
 pytest
 ```
 
-Tests use mocked LDAP responses and do not require a live domain.
-
-
 ## License
 
 MIT. See `LICENSE`.
